@@ -1,0 +1,18 @@
+<h1>Here are Your CDs</h1>
+
+<div>
+
+  <% @albums.each() do |album| %>
+  <li><%= album.name()%>
+    <%= album.artist() %>
+  <% end %>
+</div>
+
+<form action="/albums" method="post">
+  <label for="album_name">Enter the Album Name</label>
+  <input id="album_name" name="album_name" type="text">
+  <label for="artist">Enter the Artist</label>
+  <input id="artist" name="artist" type="text">
+  <button type="submit-success">Rock on</button>
+
+</form>
